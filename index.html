@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>An Interactive Audio Interface</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        function playpause(id){
+           var audio = document.getElementById(id);
+            if (audio.paused)
+                audio.play();
+            else
+                audio.pause();
+            }
+
+        setInterval(
+        function (){
+            var random_bg_colour = Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = "#" + random_bg_colour;
+            },1500);
+    </script>
+    <div class = "container">
+        <h1>My Chill Playlist</h1>
+        <h4>Click on an image to play music.</h4>
+    </div>
+    <div class="row"> 
+        <div class="column">
+            <img id = "1" src="/1.jpg" style="width:100%" value="play" onclick="playpause('anywhere'); changeopacity('1')">
+            <audio id="anywhere" src="/audio/Anywhere by Ikson.mp3" ></audio>
+            <img id = "2" src="/4.jpg" style="width:100%" value="play" onclick="playpause('nomore')">
+            <audio id="nomore" src="/audio/No More by HaTom.mp3"></audio>
+        </div>
+        <div class="column">
+            <img id = "3" src="/2.jpg" style="width:100%" value="play"  onclick="playpause('wayhome')">
+            <audio id="wayhome" src="/audio/Way Home by Tokyo Music Walker.mp3"></audio>
+            <img id = "4" src="/3.jpg" style="width:100%" value="play"  onclick="playpause('eastridge')">
+            <audio id="eastridge" src="/audio/Eastridge Turnstile by The Loyalist.mp3"></audio>
+            <img id = "5" src="/1.jpg" style="width:100%" value="play"  onclick="playpause('escape')">
+            <audio id="escape" src="/audio/Escape by Sappheiros Chillstep Song.mp3"></audio>
+        </div>  
+        <div class="column">
+            <img id = "6"src="/1.jpg" style="width:100%" value="play"  onclick="playpause('itsnotxmastime')">
+            <audio id="itsnotxmastime" src="/audio/It's Not Christmas Time by RYYZN x Kimmy Baggins.mp3"></audio>
+            <img id = "7" src="/4.jpg" style="width:100%" value="play"  onclick="playpause('doit')">
+            <audio id="doit" src="/audio/Ikson - Do It.mp3"></audio>
+        </div>
+      </div>
+</body>
+</html>

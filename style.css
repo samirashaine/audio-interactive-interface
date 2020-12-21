@@ -1,0 +1,54 @@
+body {
+	overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-family: monospace;
+}
+h4{
+  font-family: monospace;
+}
+
+.container {
+    width: 500px;
+    height: 750px;
+	  margin: 10px;
+  	padding: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 4px;
+  }
+  
+  .column {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
